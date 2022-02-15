@@ -1,0 +1,29 @@
+
+@hostname = http://localhost
+@port = 3001
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+@persons = /api/persons
+@id = 4
+
+###
+
+GET {{host}}{{persons}} HTTP/1.1
+
+###
+
+GET {{host}}{{persons}}/{{id}} HTTP/1.1
+
+###
+
+POST {{host}}{{persons}} HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+  "name": "Samantha",
+  "number": "234-12343242"
+}
+
+###
+
+DELETE {{host}}{{persons}}/{{id}} HTTP/1.1
