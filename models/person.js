@@ -18,7 +18,7 @@ mongoose.connect(url)
       minlength: 3,
       required: true
     },
-    number: {
+    number: { 
       type: String,
       minlength: 8,
       required: true
