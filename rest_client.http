@@ -4,7 +4,7 @@
 @host = {{hostname}}:{{port}}
 @contentType = application/json
 @persons = /api/persons
-@id = 4
+@id = 620c44e60b0c3cd0dd3539bf
 
 ###
 
@@ -20,10 +20,21 @@ POST {{host}}{{persons}} HTTP/1.1
 Content-Type: {{contentType}}
 
 {
-  "name": "Samantha",
-  "number": "234-12343242"
+  "name": "Jesus",
+  "number": "234-12313"
 }
 
 ###
 
 DELETE {{host}}{{persons}}/{{id}} HTTP/1.1
+
+###
+
+PUT {{host}}{{persons}}/{{id}} HTTP/1.1
+Content-Type: {{contentType}}
+
+{
+  "name": "Jesus",
+  "number": "2131"
+}
+###
